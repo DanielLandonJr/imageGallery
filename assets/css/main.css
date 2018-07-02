@@ -2,12 +2,13 @@ body {
   margin: 20px;
   padding: 0px;
   background: #d3d3d3;
+  box-sizing: border-box;
 }
 
 .container {
   max-width: 640px;
   margin: auto;
-  border: #fff solid 3px;
+  border: #fff solid 5px;
   background: #fff;
 }
 
@@ -27,13 +28,23 @@ body {
 
 /* something cheesy */
 .imgs img:hover {
-  /* scale up a bit and rotate to show you are pointing at it */
-  transform: scale(1.2) rotate(2deg);
+  /* scale up a bit and rotate */
+  transform: scale(1.1) rotate(2deg);
   transition: transform 0.25s ease-in-out;
   /* add a smear effect behind the image */
   box-shadow: 0 0 112px rgba(0, 0, 0, 1);
   /* round the corners a bit */
   border-radius: 15px;
+}
+
+/* blur it out and turn it grey */
+.selectedImage {
+  /* blur the image a bit and turn it to greyscale */
+  filter: blur(1.5px) grayscale(100%);
+  /* keep the smear effect, just not as much */
+  box-shadow: 0 0 112px rgba(0, 0, 0, 0.5);
+  /* lets make it an oval */
+  border-radius: 50%;
 }
 
 /* fade in animation */
@@ -44,10 +55,10 @@ body {
   }
 }
 
-/* this is the class that will add the animation to the img */
+/* this is the class that will add the animation to the large img */
 .fade-in {
   /* starting opacity is 0 */
-  opacity: 0;
+    opacity: 0;
   /* change it based on the keyframe, take 0.5s to complete */
   animation: fadeIn 0.5s ease-in 1 forwards;
 }
