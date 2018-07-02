@@ -1,2 +1,2 @@
 # imageGallery
-A couple demo sites that show how to create Image Galleries
+A demo site that shows how to create Image Gallerie

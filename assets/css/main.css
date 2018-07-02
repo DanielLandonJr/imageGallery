@@ -1,11 +1,11 @@
 body {
   margin: 20px;
   padding: 0px;
-  background: #333;
+  background: #d3d3d3;
 }
 
 .container {
-  max-width: 760px;
+  max-width: 640px;
   margin: auto;
   border: #fff solid 3px;
   background: #fff;
@@ -23,6 +23,17 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
   cursor: pointer;
+}
+
+/* something cheesy */
+.imgs img:hover {
+  /* scale up a bit and rotate to show you are pointing at it */
+  transform: scale(1.2) rotate(2deg);
+  transition: transform 0.25s ease-in-out;
+  /* add a smear effect behind the image */
+  box-shadow: 0 0 112px rgba(0, 0, 0, 1);
+  /* round the corners a bit */
+  border-radius: 15px;
 }
 
 /* fade in animation */
